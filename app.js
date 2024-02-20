@@ -1,40 +1,6 @@
-const qoa = require('qoa')
-
-const isAdditon = (operator) => {
-    return operator === 'addition' ? true : false
-}
-
-const isMultiplication = (operator) => {
-    return operator === 'multiplicaton' ? true : false
-}
-
-const isSubtruction = (operator) => {
-    return operator === 'soustraction' ? true : false
-}
-
-const isDivision = (operator) => {
-    return operator === 'division' ? true : false
-}
-
-const multipication = (number) => {
-    const { firstValue, secondValue } = number
-    return parseFloat(firstValue) * parseFloat(secondValue)
-}
-
-const addition = (number) => {
-    const { firstValue, secondValue } = number
-    return parseFloat(firstValue) + parseFloat(secondValue)
-}
-
-const subtruction = (number) => {
-    const { firstValue, secondValue } = number
-    return parseFloat(firstValue) - parseFloat(secondValue)
-}
-
-const division = (number) => {
-    const { firstValue, secondValue } = number
-    return parseFloat(firstValue) / parseFloat(secondValue)
-}
+import qoa from "qoa"
+import { multipication, addition, subtruction, division } from "./calculator.js"
+import { isAdditon, isDivision, isMultiplication, isSubtruction } from "./validated.js"
 
 const input = async () => {
     const secure = await qoa.secure({
@@ -67,21 +33,20 @@ const input = async () => {
     return Object.assign({}, value, value2, operator)
 }
 
-input()
-    .then(data => {
-        if (isAdditon(data.operator)) {
-            console.log("La somme est egale à: ", addition(data));
-        }
+const data = await input()
 
-        if (isMultiplication(data.operator)) {
-            console.log("La multiplication est egale à: ", multipication(data));
-        }
+if (isAdditon(data.operator)) {
+    console.log("La somme est egale à: ", addition(data));
+}
 
-        if (isSubtruction(data.operator)) {
-            console.log("La reste est egale à: ", subtruction(data));
-        }
+if (isMultiplication(data.operator)) {
+    console.log("La multiplication est egale à: ", multipication(data));
+}
 
-        if (isDivision(data.operator)) {
-            console.log("La division est egale à: ", division(data));
-        }
-    })
+if (isSubtruction(data.operator)) {
+    console.log("La reste est egale à: ", subtruction(data));
+}
+
+if (isDivision(data.operator)) {
+    console.log("La division est egale à: ", division(data));
+}
