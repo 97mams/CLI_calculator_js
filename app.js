@@ -5,35 +5,35 @@ const isAdditon = (operator) => {
 }
 
 const isMultiplication = (operator) => {
-    return operator === 'addition' ? true : false
+    return operator === 'multiplicaton' ? true : false
 }
 
 const isSubtruction = (operator) => {
-    return operator === 'addition' ? true : false
+    return operator === 'soustraction' ? true : false
 }
 
 const isDivision = (operator) => {
-    return operator === 'addition' ? true : false
+    return operator === 'division' ? true : false
 }
 
 const multipication = (number) => {
     const { firstValue, secondValue } = number
-    return parseInt(firstValue) * parseInt(secondValue)
+    return parseFloat(firstValue) * parseFloat(secondValue)
 }
 
 const addition = (number) => {
     const { firstValue, secondValue } = number
-    return parseInt(firstValue) + parseInt(secondValue)
+    return parseFloat(firstValue) + parseFloat(secondValue)
 }
 
 const subtruction = (number) => {
     const { firstValue, secondValue } = number
-    return parseInt(firstValue) + parseInt(secondValue)
+    return parseFloat(firstValue) - parseFloat(secondValue)
 }
 
 const division = (number) => {
     const { firstValue, secondValue } = number
-    return parseInt(firstValue) + parseInt(secondValue)
+    return parseFloat(firstValue) / parseFloat(secondValue)
 }
 
 const input = async () => {
@@ -74,14 +74,14 @@ input()
         }
 
         if (isMultiplication(data.operator)) {
-            console.log("La somme est egale à: ", multipication(data));
+            console.log("La multiplication est egale à: ", multipication(data));
         }
 
         if (isSubtruction(data.operator)) {
-            console.log("La somme est egale à: ", subtruction(data));
+            console.log("La reste est egale à: ", subtruction(data));
         }
 
         if (isDivision(data.operator)) {
-            console.log("La somme est egale à: ", division(data));
+            console.log("La division est egale à: ", division(data));
         }
     })
