@@ -4,19 +4,35 @@ const isAdditon = (operator) => {
     return operator === 'addition' ? true : false
 }
 
-const isAdditon = (operator) => {
+const isMultiplication = (operator) => {
     return operator === 'addition' ? true : false
 }
 
-const isAdditon = (operator) => {
+const isSubtruction = (operator) => {
     return operator === 'addition' ? true : false
 }
 
+const isDivision = (operator) => {
+    return operator === 'addition' ? true : false
+}
 
-
-const mulipication = (number) => {
+const multipication = (number) => {
     const { firstValue, secondValue, operator } = number
-    console.log(operator);
+    return parseInt(firstValue) * parseInt(secondValue)
+}
+
+const addition = (number) => {
+    const { firstValue, secondValue, operator } = number
+    return parseInt(firstValue) + parseInt(secondValue)
+}
+
+const subtruction = (number) => {
+    const { firstValue, secondValue, operator } = number
+    return parseInt(firstValue) + parseInt(secondValue)
+}
+
+const division = (number) => {
+    const { firstValue, secondValue, operator } = number
     return parseInt(firstValue) + parseInt(secondValue)
 }
 
@@ -54,7 +70,19 @@ const input = async () => {
 input()
     .then(a => {
         if (isAdditon(a.operator)) {
-            console.log("La somme est egale à: ", mulipication(a));
+            console.log("La somme est egale à: ", addition(a));
+        }
+
+        if (isMultiplication(a.operator)) {
+            console.log("La somme est egale à: ", multipication(a));
+        }
+
+        if (isSubtruction(a.operator)) {
+            console.log("La somme est egale à: ", subtruction(a));
+        }
+
+        if (isDivision(a.operator)) {
+            console.log("La somme est egale à: ", division(a));
         }
     })
 
