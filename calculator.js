@@ -10,7 +10,7 @@ export const addition = (number) => {
     return parseFloat(firstValue) + parseFloat(secondValue)
 }
 
-export const subtruction = (number) => {
+export const subtraction = (number) => {
     const { firstValue, secondValue } = number
     return parseFloat(firstValue) - parseFloat(secondValue)
 }

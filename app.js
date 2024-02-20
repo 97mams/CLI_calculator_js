@@ -1,6 +1,6 @@
 import qoa from "qoa"
-import { multipication, addition, subtruction, division } from "./calculator.js"
-import { isAdditon, isDivision, isMultiplication, isSubtruction } from "./validated.js"
+import { multipication, addition, subtraction, division } from "./calculator.js"
+import { isAdditon, isDivision, isMultiplication, isSubtraction } from "./validated.js"
 
 const confirm = await qoa.confirm({
     query: 'Vous voulez faire du calcule ?',
@@ -62,8 +62,8 @@ if (isMultiplication(data.operator)) {
     console.log("La multiplication est egale à:", isResult(multipication(data)));
 }
 
-if (isSubtruction(data.operator)) {
-    console.log("La reste est egale à:", isResult(subtruction(data)));
+if (isSubtraction(data.operator)) {
+    console.log("La reste est egale à:", isResult(subtraction(data)));
 }
 
 if (isDivision(data.operator)) {

@@ -6,7 +6,7 @@ export const isMultiplication = (operator) => {
     return operator === 'multiplicaton' ? true : false
 }
 
-export const isSubtruction = (operator) => {
+export const isSubtraction = (operator) => {
     return operator === 'soustraction' ? true : false
 }
 
