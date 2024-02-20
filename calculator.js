@@ -1,3 +1,5 @@
+
+
 export const multipication = (number) => {
     const { firstValue, secondValue } = number
     return parseFloat(firstValue) * parseFloat(secondValue)
