@@ -3,7 +3,7 @@ import { multipication, addition, subtraction, division } from "./calculator.js"
 import { isAdditon, isDivision, isMultiplication, isSubtraction } from "./validated.js"
 
 const confirm = await qoa.confirm({
-    query: 'Vous voulez faire du calcule ?',
+    query: 'Vous voulez faire une calcule ?',
     handle: 'confirm',
     accept: 'o',
     deni: 'n'
