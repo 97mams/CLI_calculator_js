@@ -3,7 +3,7 @@ export const isAdditon = (operator) => {
 }
 
 export const isMultiplication = (operator) => {
-    return operator === 'multiplicaton' ? true : false
+    return operator === 'multiplication' ? true : false
 }
 
 export const isSubtraction = (operator) => {

@@ -3,7 +3,7 @@ import { multipication, addition, subtraction, division } from "./calculator.js"
 import { isAdditon, isDivision, isMultiplication, isSubtraction } from "./validated.js"
 
 const confirm = await qoa.confirm({
-    query: 'Vous voulez faire une calcule ?',
+    query: 'Vous voulez faire un calcul ?',
     handle: 'confirm',
     accept: 'o',
     deni: 'n'
@@ -18,7 +18,7 @@ const isConfirm = (confirm) => {
 }
 
 const isResult = (result) => {
-    return isNaN(result) ? "Vous étes un idiot(e) !" : result
+    return isNaN(result) ? "Vous étes idiot(e) !" : result
 }
 
 isConfirm(confirm);
@@ -55,17 +55,17 @@ const data = await myQoa()
 
 
 if (isAdditon(data.operator)) {
-    console.log("La somme est egale à:", isResult(addition(data)));
+    console.log("La somme est égale à:", isResult(addition(data)));
 }
 
 if (isMultiplication(data.operator)) {
-    console.log("La multiplication est egale à:", isResult(multipication(data)));
+    console.log("La multiplication est égale à:", isResult(multipication(data)));
 }
 
 if (isSubtraction(data.operator)) {
-    console.log("La reste est egale à:", isResult(subtraction(data)));
+    console.log("La reste est égale à:", isResult(subtraction(data)));
 }
 
 if (isDivision(data.operator)) {
-    console.log("La division est egale à:", isResult(division(data)));
+    console.log("La division est égale à:", isResult(division(data)));
 }
