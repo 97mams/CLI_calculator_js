@@ -18,7 +18,7 @@ const isConfirm = (confirm) => {
 }
 
 const isResult = (result) => {
-    return isNaN(result) ? "Vous étes idiot(e) !" : result
+    return isNaN(result) ? "Vous étes idiot(e) !" : new Intl.NumberFormat('de-DE').format(result,)
 }
 
 isConfirm(confirm);
