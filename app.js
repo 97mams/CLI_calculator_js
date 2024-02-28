@@ -25,7 +25,7 @@ isConfirm(confirm);
 
 const myQoa = async () => {
 
-    const value = await qoa.input({
+    const firstValue = await qoa.input({
         query: 'Saisir un nombre: ',
         handle: 'firstValue'
     })
@@ -42,12 +42,12 @@ const myQoa = async () => {
         ]
     })
 
-    const value2 = await qoa.input({
-        query: 'Saisir un nombre 2: ',
+    const secondValue = await qoa.input({
+        query: 'Saisir un second nombre: ',
         handle: 'secondValue'
     })
 
-    return Object.assign({}, value, value2, operator)
+    return Object.assign({}, firstValue, secondValue, operator)
 }
 
 const data = await myQoa()
